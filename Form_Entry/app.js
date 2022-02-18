@@ -62,13 +62,20 @@ class OneDialog extends HTMLElement {
 }
 
 
+let ary = ["Shinny Creek", "Jacobs Fork", "Little River"];
+// console.log(ary);
 
+ary.forEach(element => console.log(element));
 
+let ary1 = [2,4,6];
+let test1 = ary1.map(X => X*2);
+console.log(test1);
 
+const test2 = ary.filter(word => word.length >= 12);
+console.log(test2);
 
-
-
-
+const test3 = ary.find(val => val.includes("Shi"));
+console.log(test3);
 
 
 
