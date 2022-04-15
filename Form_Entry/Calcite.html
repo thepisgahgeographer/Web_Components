@@ -19,6 +19,13 @@
             height: 100%;
             width: 100%;
         }
+
+        #steps {
+            z-index: 2;
+            background-color: white;
+            position: absolute;
+            bottom: 0px;
+        }
     </style>
 
 </head>
@@ -35,6 +42,18 @@
 
 
     </calcite-shell>
+
+
+    <calcite-stepper id="steps">
+        <calcite-stepper-item item-title="Add info" item-subtitle="Subtitle lorem ipsum" complete>Step 1
+            Content here lorem ipsum</calcite-stepper-item>
+        <calcite-stepper-item item-title="Add data" item-subtitle="Error example" error>Step 2 Content
+            here error</calcite-stepper-item>
+        <calcite-stepper-item item-title="Upload images" item-subtitle="Subtitle lorem ipsum" active>
+            Step 3 Content here dolor set amet et geographica</calcite-stepper-item>
+        <calcite-stepper-item item-title="Review" item-subtitle="Disabled example" disabled>Step 4
+            Content here</calcite-stepper-item>
+    </calcite-stepper>
 
 
     <div id="viewDiv"></div>
@@ -68,6 +87,10 @@
             map: webmap,  // The WebMap instance created above
             container: "viewDiv"
         });
+
+
+        document.getElementById("steps")
+
 
     })());
 </script>
